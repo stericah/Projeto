@@ -1,276 +1,763 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-	<style>
-		body {
-			background: #F1F1F1;
-			color: #666 !important;
-			font: 12px verdana !important;
-			line-height: 200% !important;
-		}
-		table, .sf {
-			visibility: hidden;
-		}
-		#main table {
-			visibility: visible;
-			color: #666 !important;
-			font: 12px verdana !important;
-			line-height: 200% !important;
-		}
-		#main td {
-			vertical-align: top !important;
-		}
-		#nav {
-			background: fixed repeat top left #185e68 url("http://i.imgur.com/rHnEFMt.jpg");
-			padding: 30px;
-			top: 200px;
-			left: 0px;
-			width: 100%;
-			height: auto;
-		}
-		.outernav {
-			margin-left: 50%;
-		}
-		.nav {
-			background: white;
-			width: 170px;
-			padding: 30px 40px 30px 30px;
-			margin: 0px;
-			text-align: justify;
-			margin-left: -500px;
-		}
-		.nav a {
-			display: block;
-			text-transform: normal;
-			width: 100%;
-			border-bottom: 1px solid #EBEBEB;
-			padding: 8px 5px;
-			text-align: right;
-			font: 9px verdana !important;
-		}
-		.nav a b {
-			display: none;
-			font-weight: normal;
-		}
-		.nav a:hover b {
-			display: inline;
-		}
-		.nav img {
-			width: 180px;
-			height: auto;
-		}
-		#main {
-			top: 100px;
-			left: 50%;
-			margin-left: -175px;
-			z-index: 9;
-		}
-		.box {
-			background: white;
-			width: 570px;
-			padding: 40px;
-			margin-bottom: 55px;
-			text-align: justify;
-		}
-		h1 {
-			color: #555;
-			font-family: tahoma,sans-serif;
-			font-size: 20px;
-			font-weight: normal;
-			text-align: left;
-			padding: 0px;
-			text-transform: normal;
-			line-height: 100%;
-			margin: 0px;
-		}
-		h2 {
-			color: #999;
-			font-family: monospace;
-			font-size: 10px;
-			font-weight: normal;
-			text-align: left;
-			padding: 0px;
-			text-transform: uppercase;
-			line-height: 100%;
-			margin: 0px 0px 15px 30px;
-		}
-		h3 {
-			border-bottom: 1px solid #ddd;
-			color: #333 !important;
-			font: 15px verdana !important;
-			text-decoration: none;
-			text-transform: uppercase;
-			display: block;
-			text-align: right;
-			padding: 0px 5px 2px 5px;
-			margin-bottom: 13px;
-		}
-		h4 {
-			padding: 5px 10px;
-			color: white;
-			display: block;
-			text-transform: lowercase;
-			width: 550px;
-			text-align: center;
-			font-family: georgia;
-			font-style: italic;
-			font-weight: 800;
-			font-size: 13px;
-			background: #d8b376;
-			border-radius: 20px;
-		}
-		b {
-			font-weight: normal;
-			letter-spacing: 1px;
-			color: #333;
-		}
-		a {
-			color: #333 !important;
-			font: 9px verdana !important;
-			text-decoration: none;
-			letter-spacing: 1px;
-		}
-		a:hover {
-			color: #666 !important;
-		}
-		textarea {
-			font: 15px georgia !important;
-			background: #6b8d9e;
-			color: white;
-			border: 10px solid #6b8d9e;
-			font-style: italic !important;
-			line-height: 50% !important;
-			letter-spacing: -2px;
-			font-weight: 800 !important;
-		}
-		textarea:hover {
-			background: #afcfe5;
-			border: 10px solid #afcfe5;
-		}
-		ul {
-			list-style-type: square;
-		}
-		.left {
-			float: left;
-			background: #efefef;
-			padding: 10px;
-			border-right: 10px solid white;
-			border-bottom: 10px solid white;
-		}
-		.right {
-			float: right;
-			background: #efefef;
-			padding: 10px;
-			border-left: 10px solid white;
-			border-bottom: 10px solid white;
-		}
-	</style>
-</head>
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Ada Lovelace</title>
-	<style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal do Aluno - USF</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
 
-	</style>
+        .banner {
+            background: linear-gradient(to right, #8DC63F, #007437);
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .banner-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .usf-logo {
+            font-weight: bold;
+            font-size: 28px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .banner-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .banner-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .banner-subtitle {
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .menu-button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px;
+            margin-right: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .menu-button:hover {
+            transform: scale(1.1);
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .menu {
+            width: 0;
+            background-color: #fff;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            position: fixed;
+            height: 100%;
+            z-index: 1000;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        }
+
+        .menu.active {
+            width: 280px;
+        }
+
+        .menu-header {
+            padding: 20px;
+            background: #007437;
+            color: white;
+            text-align: center;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .menu-header h3 {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            white-space: nowrap;
+        }
+
+        .menu-section {
+            margin: 10px 0;
+            padding: 0 15px;
+        }
+
+        .menu-section-title {
+            color: #666;
+            font-size: 12px;
+            text-transform: uppercase;
+            padding: 10px 5px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .menu li {
+            margin: 5px 0;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #333;
+            padding: 12px 15px;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+            margin: 2px 0;
+        }
+
+        .menu a:hover {
+            background-color: #f0f9f4;
+            color: #007437;
+        }
+
+        .menu a i {
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+            color: #007437;
+        }
+
+        .menu-footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 15px;
+            background: #f9f9f9;
+            border-top: 1px solid #eee;
+            font-size: 12px;
+            color: #666;
+            text-align: center;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            margin-left: 0;
+            transition: margin-left 0.3s ease;
+        }
+
+        .menu.active + .container .content {
+            margin-left: 280px;
+        }
+
+        .notification-badge {
+            background-color: #ff4444;
+            color: white;
+            font-size: 10px;
+            padding: 2px 6px;
+            border-radius: 10px;
+            margin-left: 8px;
+        }
+
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        .login-form {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .login-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .login-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007437;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .login-form button:hover {
+            background-color: #005c2b;
+        }
+
+        .welcome-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .welcome-container h2 {
+            color: #007437;
+        }
+
+        .carteirinha-container {
+            text-align: center;
+        }
+
+        .carteirinha-container img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007437;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #005c2b;
+        }
+
+        @media (max-width: 768px) {
+            .banner-subtitle {
+                display: none;
+            }
+            
+            .menu.active + .container .content {
+                margin-left: 0;
+            }
+            
+            .menu {
+                position: fixed;
+                left: -280px;
+                top: 0;
+                width: 280px;
+                height: 100%;
+                transition: left 0.3s ease;
+            }
+
+            .menu.active {
+                left: 0;
+            }
+
+            .menu-overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0,0,0,0.5);
+                z-index: 999;
+            }
+
+            .menu-overlay.active {
+                display: block;
+            }
+        }
+    </style>
 </head>
 <body>
-	<div id="nav" style="position: fixed;">
-		<div class="outernav">
-			<div class="nav">
-				<a href="#Início" style="border-top: 1px solid #EBEBEB;">Início<b> »</b></a>
-				<a href="#A mãe da programação">A mãe da programação <b> »</b></a>
-				<a href="#Feitos e conquistas">Feitos e conquistas<b> »</b></a>
-				<a href="#Quiz">Quiz<b> »</b></a>
-			</div>
-		</div>
-	</div>
+    <div class="banner">
+        <button class="menu-button">☰</button>
+        <div class="banner-content">
+            <a href="#" class="usf-logo">USF</a>
+            <div class="banner-text">
+                <h1 class="banner-title">UNIVERSIDADE SÃO FRANCISCO</h1>
+                <p class="banner-subtitle">PORTAL DO ALUNO</p>
+            </div>
+        </div>
+    </div>
 
-	<div id="main" style="position: absolute;">
-		<a name="Início"></a>
-		<div class="box">
-			Bem-vindo ao site dedicado a Ada Lovelace, a primeira programadora da história. Aqui iremos conhecer como seu olhar visionário, criatividade e sua ávida busca por conhecimento fez com que se tornasse a pioneira na área de tecnologia, sendo uma grande referência até os dias atuais.
-		 
-		</div>
+    <div class="menu-overlay" id="menuOverlay"></div>
+    <div class="menu" id="sideMenu">
+        <div class="menu-header">
+            <h3>Portal do Aluno</h3>
+        </div>
+        
+        <div class="menu-section">
+            <div class="menu-section-title">Acadêmico</div>
+            <ul>
+                <li><a href="#" data-page="inicio"><i class="fas fa-home"></i>Início</a></li>
+                <li><a href="#" data-page="notas-faltas"><i class="fas fa-graduation-cap"></i>Notas e Faltas<span class="notification-badge">2</span></a></li>
+                <li><a href="#" data-page="disciplinas"><i class="fas fa-book"></i>Disciplinas</a></li>
+                <li><a href="#" data-page="horarios"><i class="fas fa-calendar-alt"></i>Horários</a></li>
+                <li><a href="#" data-page="requerimentos"><i class="fas fa-file-alt"></i>Requerimentos</a></li>
+            </ul>
+        </div>
 
-		<a name="A mãe da programação"></a>
-		<div class="box">
-			<h1>A mãe da programação</h1>
-			<h2></h2>
-			<img src="https://media.newyorker.com/photos/64123041652f9d9fe976fff0/master/w_1600,c_limit/ra1146.jpg" width="200" height="250" class="left">
-			Ada Lovelace, conhecida como a primeira programadora da história, nasceu em Londres em 10 de dezembro de 1815, filha de George Gordon Byron, um famoso poeta de sua época, e Anne Isabella Milbanke, uma matemática de grandes conhecimentos. Ainda que tenha escolhido o nome de sua filha, Lord Byron não se mostrou feliz com o nascimento de Ada, já que esperava ter um filho homem e, com isso, foi levada por Isabella para a casa de seus avós em seu primeiro mês de vida, em janeiro de 1816. George abdicou do direito de custódia de sua filha após a separação e faleceu durante a Guerra de Independência Grega, em 1824, sem nunca mais tê-la visto.
-			Isabelle buscou educar a filha de maneira que seguisse uma linha diferente do pai e, assim, a direcionou para o campo da  matemática e lógica. 
-			<p>Ao longo de sua infância e adolescencia Ada adquiriu grandes conhecimentos na área lógica e tornou-se pupila de Augustus de Morgan, primeiro professor de matemática da universidade de Londres, pai das Leis de Morgan. Com seu alto grau de instrução e conhecimento crescente, Ada conheceu Charles Babbage, em 1933, um matemático que estava construindo a Máquina Diferencial 1, futuralmente Máquina Analítica. Babbage, impressionado com o conhecimento de Ada, mostrou-lhe a máquina e, a partir desse momento, tem início a tragetória daquela que seria a primeira programadora da história.</p>
-		</div>
+        <div class="menu-section">
+            <div class="menu-section-title">Financeiro</div>
+            <ul>
+                <li><a href="#" data-page="mensalidades"><i class="fas fa-dollar-sign"></i>Mensalidades</a></li>
+                <li><a href="#" data-page="boletos"><i class="fas fa-file-invoice"></i>Boletos</a></li>
+                <li><a href="#" data-page="financiamentos"><i class="fas fa-hand-holding-usd"></i>Financiamentos</a></li>
+            </ul>
+        </div>
 
-		<a name="Feitos e conquistas"></a>
-		<div class="box">
-			<h1>Feitos e conquistas</h1>
-			Babbage foi convidado para apresentar um seminário na Universidade de Turim, em 1842, a respeito da Máquina Analítica.  Luigi Menabrae, um engenheiro matemático, realizou a publicação de tal palestra em francês, chegando até a Biblioteca Nacional de Genebra. Babbage, então, pediu para que Ada realizasse a tradução para o inglês.
-			<p>Ada foi capaz de notar e entender que a máquina poderia realizar mais do que havia sido explorado. Utilizando de seus conhecimentos criou algoritmos que permitiram que a máquina fosse capaz de computar valores e funções matemáticas e de revisar documentação. Além disso, adicionou notas para complementação do estudo apontando o algoritmo criado para ser processado por máquinas, notando que se trocasse os números que queria calcular por outros elementos como letras, símbolos e códigos poderia programar a máquina para realizar a função que gostaria, assim criando o primeiro código de computador. Seu trabalho, nomeado como Anotações, foi publicado no The Lady's Diary, sob as iniciais de AAL. </p>
-		<p>Com o objetivo de aproximar a área lógica da literatura, Ada desenvolveu o pensamento sobre a capacidade dos computadores irem além dos cálculos e processamento de números, sendo chamado de ciência poética.</p>
-	</s>
+        <div class="menu-section">
+            <div class="menu-section-title">Serviços</div>
+            <ul>
+                <li><a href="#" data-page="ambiente-virtual"><i class="fas fa-laptop"></i>Ambiente Virtual</a></li>
+                <li><a href="#" data-page="biblioteca"><i class="fas fa-book-reader"></i>Biblioteca</a></li>
+                <li><a href="#" data-page="carteirinha"><i class="fas fa-id-card"></i>Carteirinha</a></li>
+                <li><a href="#" data-page="suporte"><i class="fas fa-question-circle"></i>Suporte</a></li>
+            </ul>
+        </div>
 
-			<h3>O algoritmo</h3>
-			Em seu trabalho havia o algoritmo criado para ser interpretado pela Máquina Analítica, em que passava informações sobre como a máquina deveria se comportar para conseguir a sequencia de Bernoulli, sendo o primeiro criado especificamente para ser interpretado por um computador.
+        <div class="menu-footer">
+            © 2024 USF - Todos os direitos reservados
+        </div>
+    </div>
 
-		</div>
+    <div class="container">
+        <div class="content" id="content">
+            <!-- Página de Login -->
+            <div class="page active" id="login">
+                <h2>Login</h2>
+                <form class="login-form" id="loginForm">
+                    <input type="text" placeholder="Login" value="202236479" readonly><br>
+                    <input type="password" placeholder="Senha" value="gabriel" readonly><br>
+                    <button type="submit">Entrar</button>
+                </form>
+            </div>
 
-		<a name="Quiz"></a>
-		<div class="box">
-			<h1>Quiz sobre Ada Lovelace</h1>
-			<h2>Clique na resposta correta para cada pergunta.</h2>
-			<div id="quiz">
-			  <p>Pergunta 1: Qual foi a contribuição de Ada Lovelace para a ciência da computação?</p>
-			  <label>
-				<input type="radio" name="q1" value="a">a) Criou a primeira linguagem de programação
-			  </label><br>
-			  <label>
-				<input type="radio" name="q1" value="b">b) Inventou o primeiro computador
-			  </label><br>
-			  <label>
-				<input type="radio" name="q1" value="c">c) Desenvolveu a teoria da relatividade
-			  </label><br>
-			  <br>
-			  <p>Pergunta 2: Qual era o nome completo de Ada Lovelace?</p>
-			  <label>
-				<input type="radio" name="q2" value="a">a) Ada Johnson
-			  </label><br>
-			  <label>
-				<input type="radio" name="q2" value="b">b) Ada Byron
-			  </label><br>
-			  <label>
-				<input type="radio" name="q2" value="c">c) Ada King-Noel
-			  </label><br>
-			  <br>
-			  <button onclick="checkAnswers()">Verificar Respostas</button>
-			  <p id="result"></p>
-			</div>
-			
-			<script>
-			  function checkAnswers() {
-				const q1 = document.querySelector('input[name="q1"]:checked');
-				const q2 = document.querySelector('input[name="q2"]:checked');
-				const result = document.getElementById('result');
-			
-				if (!q1 || !q2) {
-				  result.textContent = 'Por favor, responda todas as perguntas!';
-				  return;
-				}
-			
-				const answer1 = q1.value;
-				const answer2 = q2.value;
-				let score = 0;
-			
-				if (answer1 === 'a') score++;
-				if (answer2 === 'c') score++;
-			
-				result.textContent = `Você acertou ${score} de 2 perguntas!`;
-			  }
-			</script>
-			
-			</a><br>	
-		</div>
-	</div>
+            <!-- Página de Boas-vindas -->
+            <div class="page" id="inicio">
+                <div class="welcome-container">
+                    <h2>Bem-vindo ao Portal do Aluno USF</h2>
+                    <p>Olá, Gabriel Silva! Bem-vindo ao seu portal personalizado da Universidade São Francisco. Aqui você encontrará todas as informações necessárias para sua vida acadêmica.</p>
+                    <h3>Destaques:</h3>
+                    <ul>
+                        <li>Você tem 2 novas notas lançadas. Confira em <a href="#" data-page="notas-faltas">Notas e Faltas</a>.</li>
+                        <li>A data limite para solicitação de revisão de notas é 30/10/2024.</li>
+                        <li>As inscrições para monitoria do próximo semestre estão abertas até 15/11/2024.</li>
+                        <li>Não se esqueça de avaliar seus professores até o final do semestre.</li>
+                    </ul>
+                    <h3>Próximos eventos:</h3>
+                    <ul>
+                        <li>25/10/2024 - Palestra: "Inovações em Engenharia de Software"</li>
+                        <li>05/11/2024 - Início das inscrições para o Programa de Iniciação Científica</li>
+                        <li>20/11/2024 - Prazo final para trancamento de disciplinas</li>
+                    </ul>
+                    <p>Navegue pelo menu lateral para acessar todos os recursos disponíveis. Em caso de dúvidas, não hesite em contatar nosso suporte.</p>
+                </div>
+            </div>
+
+            <!-- Página de Notas e Faltas -->
+            <div class="page" id="notas-faltas">
+                <h2>Notas e Faltas</h2>
+                <p>Aqui você pode visualizar suas notas e faltas para cada disciplina do semestre atual.</p>
+                <table>
+                    <tr>
+                        <th>Disciplina</th>
+                        <th>Nota 1</th>
+                        <th>Nota 2</th>
+                        <th>Média</th>
+                        <th>Faltas</th>
+                        <th>Situação</th>
+                    </tr>
+                    <tr>
+                        <td>Programação Orientada a Objetos</td>
+                        <td>8.5</td>
+                        <td>9.0</td>
+                        <td>8.75</td>
+                        <td>2</td>
+                        <td>Aprovado</td>
+                    </tr>
+                    <tr>
+                        <td>Banco de Dados</td>
+                        <td>7.0</td>
+                        <td>8.5</td>
+                        <td>7.75</td>
+                        <td>4</td>
+                        <td>Aprovado</td>
+                    </tr>
+                    <tr>
+                        <td>Engenharia de Software</td>
+                        <td>6.5</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>1</td>
+                        <td>Em andamento</td>
+                    </tr>
+                    <tr>
+                        <td>Redes de Computadores</td>
+                        <td>7.5</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>3</td>
+                        <td>Em andamento</td>
+                        </tr>
+                    <tr>
+                        <td>Inteligência Artificial</td>
+                        <td>9.0</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>0</td>
+                        <td>Em andamento</td>
+                    </tr>
+                </table>
+                <p>Observação: As notas marcadas com "-" ainda não foram lançadas.</p>
+            </div>
+
+            <!-- Página de Disciplinas -->
+            <div class="page" id="disciplinas">
+                <h2>Disciplinas</h2>
+                <p>Lista de disciplinas matriculadas no semestre atual:</p>
+                <table>
+                    <tr>
+                        <th>Código</th>
+                        <th>Disciplina</th>
+                        <th>Professor</th>
+                        <th>Carga Horária</th>
+                        <th>Sala</th>
+                    </tr>
+                    <tr>
+                        <td>CC301</td>
+                        <td>Programação Orientada a Objetos</td>
+                        <td>Dr. Carlos Mendes</td>
+                        <td>60h</td>
+                        <td>Lab 3</td>
+                    </tr>
+                    <tr>
+                        <td>CC302</td>
+                        <td>Banco de Dados</td>
+                        <td>Dra. Ana Oliveira</td>
+                        <td>60h</td>
+                        <td>Sala 205</td>
+                    </tr>
+                    <tr>
+                        <td>CC303</td>
+                        <td>Engenharia de Software</td>
+                        <td>Dr. Rafael Santos</td>
+                        <td>60h</td>
+                        <td>Sala 301</td>
+                    </tr>
+                    <tr>
+                        <td>CC304</td>
+                        <td>Redes de Computadores</td>
+                        <td>Dr. Marcelo Lima</td>
+                        <td>60h</td>
+                        <td>Lab 2</td>
+                    </tr>
+                    <tr>
+                        <td>CC305</td>
+                        <td>Inteligência Artificial</td>
+                        <td>Dra. Juliana Ferreira</td>
+                        <td>60h</td>
+                        <td>Sala 401</td>
+                    </tr>
+                </table>
+                <p>Para mais informações sobre cada disciplina, consulte o plano de ensino no Ambiente Virtual.</p>
+            </div>
+
+            <!-- Página de Horários -->
+            <div class="page" id="horarios">
+                <h2>Horários</h2>
+                <p>Confira seu horário de aulas semanal:</p>
+                <table>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Segunda</th>
+                        <th>Terça</th>
+                        <th>Quarta</th>
+                        <th>Quinta</th>
+                        <th>Sexta</th>
+                    </tr>
+                    <tr>
+                        <td>19:00 - 20:40</td>
+                        <td>Programação Orientada a Objetos</td>
+                        <td>Banco de Dados</td>
+                        <td>Engenharia de Software</td>
+                        <td>Redes de Computadores</td>
+                        <td>Inteligência Artificial</td>
+                    </tr>
+                    <tr>
+                        <td>20:50 - 22:30</td>
+                        <td>Programação Orientada a Objetos</td>
+                        <td>Banco de Dados</td>
+                        <td>Engenharia de Software</td>
+                        <td>Redes de Computadores</td>
+                        <td>Inteligência Artificial</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Página de Requerimentos -->
+            <div class="page" id="requerimentos">
+                <h2>Requerimentos</h2>
+                <p>Faça seus requerimentos acadêmicos aqui:</p>
+                <ul>
+                    <li><a href="#" class="btn">Solicitar Histórico Escolar</a></li>
+                    <li><a href="#" class="btn">Declaração de Matrícula</a></li>
+                    <li><a href="#" class="btn">Revisão de Nota</a></li>
+                    <li><a href="#" class="btn">Trancamento de Disciplina</a></li>
+                    <li><a href="#" class="btn">Aproveitamento de Estudos</a></li>
+                </ul>
+                <h3>Requerimentos em andamento:</h3>
+                <table>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Data de Solicitação</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td>Declaração de Matrícula</td>
+                        <td>15/10/2024</td>
+                        <td>Em processamento</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Página de Mensalidades -->
+            <div class="page" id="mensalidades">
+                <h2>Mensalidades</h2>
+                <p>Informações sobre suas mensalidades:</p>
+                <table>
+                    <tr>
+                        <th>Mês</th>
+                        <th>Valor</th>
+                        <th>Vencimento</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td>Outubro/2024</td>
+                        <td>R$ 1.200,00</td>
+                        <td>10/10/2024</td>
+                        <td>Pago</td>
+                    </tr>
+                    <tr>
+                        <td>Novembro/2024</td>
+                        <td>R$ 1.200,00</td>
+                        <td>10/11/2024</td>
+                        <td>Em aberto</td>
+                    </tr>
+                    <tr>
+                        <td>Dezembro/2024</td>
+                        <td>R$ 1.200,00</td>
+                        <td>10/12/2024</td>
+                        <td>Em aberto</td>
+                    </tr>
+                </table>
+                <p>Para pagamento antecipado ou negociação, entre em contato com o setor financeiro.</p>
+            </div>
+
+            <!-- Página de Boletos -->
+            <div class="page" id="boletos">
+                <h2>Boletos</h2>
+                <p>Acesse seus boletos para pagamento:</p>
+                <table>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                        <th>Vencimento</th>
+                        <th>Ação</th>
+                    </tr>
+                    <tr>
+                        <td>Mensalidade Novembro/2024</td>
+                        <td>R$ 1.200,00</td>
+                        <td>10/11/2024</td>
+                        <td><a href="#" class="btn">Gerar Boleto</a></td>
+                    </tr>
+                    <tr>
+                        <td>Mensalidade Dezembro/2024</td>
+                        <td>R$ 1.200,00</td>
+                        <td>10/12/2024</td>
+                        <td><a href="#" class="btn">Gerar Boleto</a></td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Página de Financiamentos -->
+            <div class="page" id="financiamentos">
+                <h2>Financiamentos</h2>
+                <p>Informações sobre opções de financiamento estudantil:</p>
+                <ul>
+                    <li><strong>FIES (Fundo de Financiamento Estudantil):</strong> Financiamento governamental com juros reduzidos.</li>
+                    <li><strong>PROUNI (Programa Universidade para Todos):</strong> Bolsas de estudo integrais e parciais.</li>
+                    <li><strong>Financiamento Próprio USF:</strong> Opções de parcelamento oferecidas pela universidade.</li>
+                </ul>
+                <p>Para mais informações ou para solicitar um financiamento, entre em contato com o setor financeiro.</p>
+            </div>
+
+            <!-- Página de Ambiente Virtual -->
+            <div class="page" id="ambiente-virtual">
+                <h2>Ambiente Virtual</h2>
+                <p>Acesse o ambiente virtual de aprendizagem:</p>
+                <a href="#" class="btn">Ir para o Ambiente Virtual</a>
+                <h3>Últimas atividades:</h3>
+                <ul>
+                    <li>Novo material disponível em "Programação Orientada a Objetos"</li>
+                    <li>Prazo para entrega do trabalho de "Banco de Dados" em 3 dias</li>
+                    <li>Fórum de discussão aberto em "Engenharia de Software"</li>
+                </ul>
+            </div>
+
+            <!-- Página de Biblioteca -->
+            <div class="page" id="biblioteca">
+                <h2>Biblioteca</h2>
+                <p>Acesse o sistema da biblioteca:</p>
+                <a href="#" class="btn">Ir para o Sistema da Biblioteca</a>
+                <h3>Livros emprestados:</h3>
+                <table>
+                    <tr>
+                        <th>Título</th>
+                        <th>Data de Empréstimo</th>
+                        <th>Data de Devolução</th>
+                    </tr>
+                    <tr>
+                        <td>Clean Code: A Handbook of Agile Software Craftsmanship</td>
+                        <td>05/10/2024</td>
+                        <td>19/10/2024</td>
+                    </tr>
+                    <tr>
+                        <td>Design Patterns: Elements of Reusable Object-Oriented Software</td>
+                        <td>10/10/2024</td>
+                        <td>24/10/2024</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Página de Carteirinha -->
+            <div class="page" id="carteirinha">
+                <h2>Carteirinha de Identificação Estudantil</h2>
+                <div class="carteirinha-container">
+                    <p>Sua carteirinha digital:</p>
+                    <img src="https://i.imgur.com/SuWWNTP.png" alt="Carteirinha de Identificação Estudantil">
+                </div>
+                <p>Esta é sua carteirinha digital oficial da USF. Você pode apresentá-la em formato digital para acesso ao campus e outros serviços estudantis.</p>
+                <p>Para solicitar a versão física da carteirinha, clique no botão abaixo:</p>
+                <a href="#" class="btn">Solicitar Carteirinha Física</a>
+            </div>
+
+            <!-- Página de Suporte -->
+            <div class="page" id="suporte">
+                <h2>Suporte</h2>
+                <p>Precisa de ajuda? Entre em contato com nosso suporte:</p>
+                <ul>
+                    <li><strong>E-mail:</strong> suporte@usf.edu.br</li>
+                    <li><strong>Telefone:</strong> (11) 1234-5678</li>
+                    <li><strong>WhatsApp:</strong> (11) 98765-4321</li>
+                    <li><strong>Horário de Atendimento:</strong> Segunda a Sexta, das 8h às 20h</li>
+                </ul>
+                <h3>FAQ - Perguntas Frequentes</h3>
+                <ul>
+                    <li><a href="#">Como recuperar minha senha?</a></li>
+                    <li><a href="#">Como solicitar um histórico escolar?</a></li>
+                    <li><a href="#">Qual o prazo para lançamento de notas?</a></li>
+                    <li><a href="#">Como fazer rematrícula online?</a></li>
+                </ul>
+                <p>Se sua dúvida não foi respondida, por favor, abra um chamado:</p>
+                <a href="#" class="btn">Abrir Chamado de Suporte</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const menuButton = document.querySelector('.menu-button');
+        const menu = document.getElementById('sideMenu');
+        const menuOverlay = document.getElementById('menuOverlay');
+        const content = document.getElementById('content');
+
+        menuButton.addEventListener('click', () => {
+            menu.classList.toggle('active');
+            menuOverlay.classList.toggle('active');
+        });
+
+        menuOverlay.addEventListener('click', () => {
+            menu.classList.remove('active');
+            menuOverlay.classList.remove('active');
+        });
+
+        // Adiciona funcionalidade de hover nos itens do menu
+        const menuItems = document.querySelectorAll('.menu a');
+        menuItems.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                item.style.paddingLeft = '20px';
+            });
+            item.addEventListener('mouseleave', () => {
+                item.style.paddingLeft = '15px';
+            });
+        });
+
+        // Função para mostrar a página selecionada
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+            const selectedPage = document.getElementById(pageId);
+            if (selectedPage) {
+                selectedPage.classList.add('active');
+            }
+        }
+
+        // Adiciona evento de clique para os itens do menu
+        menuItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                const pageId = item.getAttribute('data-page');
+                showPage(pageId);
+                if (window.innerWidth <= 768) {
+                    menu.classList.remove('active');
+                    menuOverlay.classList.remove('active');
+                }
+            });
+        });
+
+        // Lida com o envio do formulário de login
+        document.getElementById('loginForm').onsubmit = function(e) {
+            e.preventDefault();
+            showPage('inicio');
+        };
+
+        // Mostrar a página de login inicialmente
+        showPage('login');
+    </script>
 </body>
 </html>
